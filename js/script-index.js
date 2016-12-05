@@ -6,12 +6,11 @@ $(document).ready( function(){
 	printNews();
 
 });
-
+//Etapa2
 function printNews(){
 	var noticia= $('.callout-news').children('p');
 	noticia.text('NUEVAS RECETAS');
 	console.log('Funciona');
-	$('.callout-news').append(noticia);
 }
 
 
@@ -21,7 +20,15 @@ function printNews(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	for(var i =0 ; i<recipesArray.length; i++){
+		if(recipesArray[i].highlighted === true){
+			renderRecipe(i);
+		}
+	}
 }
+
+
+
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
