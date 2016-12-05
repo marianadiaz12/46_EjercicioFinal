@@ -3,4 +3,13 @@ $(document).ready( function() {
 	$(".js-menu").hide();
 	//Etapa 7
 	console.log("Documento listo");
+	//Etapa 10
+	$('.js-back').click(function(){
+	window.location = 'index.html';
 });
+});
+
+function make(){
+
+}
+
