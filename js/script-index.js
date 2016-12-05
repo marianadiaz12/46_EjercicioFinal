@@ -41,26 +41,26 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
-	// var template =
-	// '<a class="item-recipe" href="#">' +
- //        '<span class="attribution">' +
-	//     	'<span class="title-recipe"><%= "title" %></span>' +
-	//     	'<span class="metadata-recipe">'+
- //      			'<span class="author-recipe"><%= source.name %></span>'+
- //      			'<span class="bookmarks-recipe">'+
- //        			'<span class="icon-bookmark"></span>'+ 
- //      			'</span>'+
- //    		'</span>'+
- //  		'</span>'+
- //  		'<img src="<%= source.url %>" />'+
- //    '</a>';
+	var template =
+	'<a class="item-recipe" href="#">' +
+        '<span class="attribution">' +
+	    	'<span class="title-recipe"><%= "title" %></span>' +
+	    	'<span class="metadata-recipe">'+
+      			'<span class="author-recipe"><%= source.name %></span>'+
+      			'<span class="bookmarks-recipe">'+
+        			'<span class="icon-bookmark"></span>'+ 
+      			'</span>'+
+    		'</span>'+
+  		'</span>'+
+  		'<img src="<%= source.url %>" />'+
+    '</a>';
 
- //    var compiled = _.template(template);
- //    var li = compiled(recipe);
- //    console.log(li);
+    var compiled = _.template(template);
+    var li = compiled(recipe);
+    console.log(li);
 
- //    var receta = $(li);
- //     $('.list-recipes').append(template);
+    var receta = $(li);
+     $('.list-recipes').append(template);
 }
 
 /*
