@@ -5,7 +5,7 @@ $(document).ready( function(){
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 	printNews();
-	// renderActivities(activitiesArray);
+	renderActivities();
 });
 //Etapa2
 function printNews(){
@@ -22,18 +22,14 @@ function printNews(){
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
 	//Etapa 3
-	// for(var i =0 ; i<recipesArray.length; i++){
-	// 	if(recipesArray[i].highlighted === true){
-	// 		renderRecipe(i);
-	// 	} con este me salia un error en la etapa 4
-	// }
+	for(var i =0 ; i<recipesArray.length; i++){
+		if(recipesArray[i].highlighted === true){
+			renderRecipe(recipesArray[i]);
+		} 
+	}
+	//Otra forma
 	// var highTrue = _.where(recipesArray, {highlighted: true});
-	// renderRecipe(highTrue);
-	$.each( recipesArray, function( key, value ) {
-        if(value.highlighted==true){
-            renderRecipe(value);
-        }
-    });
+	// _.each(highTrue, renderRecipe);
 }
 
 
@@ -46,6 +42,7 @@ function renderHighlightedRecipes(recipesArray) {
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
 	
+	//Etapa 4
    	var item = $('<a class="item-recipe" href="#"></a>');
    	var spanAttri = $('<span class="attribution"></span>');
    	var spanTitle = $('<span class="title-recipe"></span>');
@@ -56,7 +53,7 @@ function renderRecipe(recipe) {
    	var spanBook = $('<span class="bookmarks-recipe"></span>');
 	var spanIcon = $('<span class="icon-bookmark"></span>'); 	
    	var img = $('<img/>');
-	img.attr('src', "img/recipes/320x350/"+recipe.name+".jpg");
+	img.attr('src', "img/recipes/640x480/" + recipe.name + ".jpg");
 
 	item.append(spanAttri);
 	spanAttri.append(spanTitle);
