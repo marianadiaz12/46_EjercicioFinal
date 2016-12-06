@@ -89,27 +89,27 @@ function renderRecipe(recipe) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	var template =
-    '<a href="#" class="item-activity">' +
-      	'<span class="attribution">' +
-	        '<span class="avatar">' +
-	          	'<img src="<%= userAvatar %>" class="image-avatar"/>' +
-	        '</span>' +
-	        '<span class="meta">' +
-		        '<span class="author"><%= userName %></span>' + ' ' + 'made' + ' ' +
-		        '<span class="recipe"><%= recipeName %></span>:' + ' ' + '<%= text %>' + ' ' +
-		        '<span class="location">&mdash;<%= place %></span>' +
-	        '</span>' +
-      	'</span>' +
-      	'<div class="bg-image" style="background-image: url(<%= image%>)"></div>' +
-    '</a>';
+	// var template =
+ //    '<a href="#" class="item-activity">' +
+ //      	'<span class="attribution">' +
+	//         '<span class="avatar">' +
+	//           	'<img src="<%= userAvatar %>" class="image-avatar"/>' +
+	//         '</span>' +
+	//         '<span class="meta">' +
+	// 	        '<span class="author"><%= userName %></span>' + ' ' + 'made' + ' ' +
+	// 	        '<span class="recipe"><%= recipeName %></span>:' + ' ' + '<%= text %>' + ' ' +
+	// 	        '<span class="location">&mdash;<%= place %></span>' +
+	//         '</span>' +
+ //      	'</span>' +
+ //      	'<div class="bg-image" style="background-image: url(<%= image%>)"></div>' +
+ //    '</a>';
 
-	var compiled= _.template(template);
-	var a = compiled(recipe);
-	console.log(a);
+	// var compiled= _.template(template);
+	// var a = compiled(recipe);
+	// console.log(a);
 
-	var acti = $(a);
-	$('.list-activities').append(acti);
+	// var acti = $(a);
+	// $('.list-activities').append(acti);
 
 }
 
