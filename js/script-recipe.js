@@ -14,14 +14,14 @@ function make(){
 }
 
 //Etapa 9
-{
+$('.js-show-recipe ').click(function(){
 	$(this).addClass('active');
-
 	$('.js-show-make').removeClass('active');
 });
 
 $('.js-show-make').click(function(){
 	$(this).addClass('active');
-
-	$('.js-show-recipe').removeClass('active');
+	$('.js-show-recipe ').removeClass('active');
 });
+
+
